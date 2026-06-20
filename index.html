@@ -1,39 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Developer</title>
-  </head>
-  <body>
-    <h1>Hi This is my portfolio</h1>
-    <h2>My name is Sayed and this is my first online website</h2>
-    <img src="./assets/images/birthday-invite.png" />
-    <a href="./public/birthday-invite.html">Birthday Invite Site</a>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroInvoice - Smart Invoicing & Inventory</title>
+    <meta name="description" content="AeroInvoice is an all-in-one digital workspace designed to streamline your daily operations, from tracking stock levels to getting paid faster.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #2563eb, #0ea5e9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
 
-    <p>This is my second project</p>
-    <img src="./assets/images/movie-ranking.png" />
-    <a href="./public/movie-ranking.html">Movie ranking </a>
+    <!-- Navigation -->
+    <nav class="w-full bg-white/80 backdrop-blur-md fixed top-0 z-50 border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-paper-plane text-blue-600 text-xl"></i>
+                    <span class="text-2xl font-bold text-gray-900 tracking-tight">Aero<span class="text-blue-600">Invoice</span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-blue-600 font-medium transition">Features</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 font-medium transition">About</a>
+                    <a href="#waitlist" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full font-medium transition shadow-sm hover:shadow-md">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    <p>
-      These are the details <a href="./public/about.html"> about me</a> if you
-      want you can <a href="./public/contact.html">contact me</a>
-    </p>
-  </body>
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="inline-block py-1 px-4 rounded-full bg-blue-50 text-blue-700 text-sm font-semibold uppercase tracking-wider mb-6 fade-in-up">
+                Launching Soon - 2026
+            </span>
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 tracking-tight mb-8 fade-in-up delay-100">
+                Empower Your Business with <br class="hidden md:block" />
+                <span class="gradient-text">Smart Invoicing</span>
+            </h1>
+            <p class="mt-4 max-w-2xl text-xl text-gray-600 mx-auto mb-10 fade-in-up delay-200">
+                AeroInvoice is the all-in-one digital workspace designed to streamline your daily operations, from tracking stock levels dynamically to getting paid faster.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in-up delay-300">
+                <a href="#waitlist" class="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-4 rounded-xl font-semibold transition shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
+                    Join the Waitlist <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#features" class="bg-white hover:bg-gray-50 text-gray-700 border border-gray-200 text-lg px-8 py-4 rounded-xl font-semibold transition shadow-sm flex items-center justify-center">
+                    Explore Features
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">Everything you need to scale</h2>
+                <p class="mt-4 text-lg text-gray-600">Built specifically to connect your inventory room directly to your accounting ledger.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Feature 1 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition duration-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-file-invoice-dollar text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Automated Digital Invoicing</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Create, send, and track professional, branded invoices in seconds. Stop chasing clients and let our automated reminders do the heavy lifting.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition duration-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-boxes-stacked text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Real-Time Inventory</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Monitor stock levels dynamically. Receive automatic low-stock alerts and manage your catalog with precision so you never miss a sale.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition duration-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-shield-halved text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Secure & Fast Payments</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Integrated payment processing ensures you can accept client payments instantly, drastically reducing your turnaround time with multi-tenant security.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Our Mission</h2>
+            <p class="text-lg text-gray-600 leading-relaxed mb-6 text-left md:text-center">
+                At AeroInvoice, we understand that running a growing business requires juggling multiple responsibilities. Our platform is engineered to remove the friction from your financial and operational workflows by providing a robust suite of tools that bridge the gap between your inventory room and your accounting ledger.
+            </p>
+            <p class="text-lg text-gray-600 leading-relaxed text-left md:text-center">
+                Whether you are managing a high-volume retail shop, a busy food service establishment, or a scaling enterprise, AeroInvoice delivers real-time insights into your stock while automating your billing processes. Say goodbye to manual entry errors, disconnected spreadsheets, and delayed payments. Our mission is to provide a seamless, reliable infrastructure that gives you back your time.
+            </p>
+        </div>
+    </section>
+
+    <!-- Waitlist CTA Section -->
+    <section id="waitlist" class="py-24 bg-blue-600 relative overflow-hidden">
+        <!-- Background decorative circles -->
+        <div class="absolute top-0 left-0 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-64 h-64 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-70 transform translate-x-1/2 translate-y-1/2"></div>
+        
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-3xl font-bold text-white mb-4">Ready to upgrade your workflow?</h2>
+            <p class="text-blue-100 text-lg mb-8">Join the exclusive private beta. Be the first to know when AeroInvoice goes live.</p>
+            
+            <form onsubmit="event.preventDefault(); alert('Welcome aboard! We will email you soon.');" class="bg-white p-2 rounded-xl flex flex-col sm:flex-row gap-2 max-w-lg mx-auto shadow-2xl">
+                <input 
+                    type="email" 
+                    placeholder="Enter your work email" 
+                    required 
+                    class="flex-grow px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 border-none"
+                >
+                <button 
+                    type="submit" 
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition whitespace-nowrap"
+                >
+                    Get Early Access
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-paper-plane text-blue-500 text-xl"></i>
+                    <span class="text-xl font-bold text-white tracking-tight">AeroInvoice</span>
+                </div>
+                
+                <div class="flex gap-8 text-sm">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                    <a href="mailto:support@aeroinvoice.com" class="hover:text-white transition">Contact Support</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>&copy; 2026 AeroInvoice. All rights reserved.</p>
+                <p>Built and maintained by the AeroInvoice Team.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
 </html>
-
-<!-- TODO 1: Create the HTML Boilerplate -->
-
-<!-- TODO 2: Add Your previous projects' HTML into the public folder -->
-
-<!-- TODO 3: Take screenshots of your project previews and add the images to the images folder -->
-
-<!-- TODO 4: Add titles/subtitles etc. -->
-
-<!-- TODO 5: Add a link to the project pages -->
-
-<!-- TODO 6: Add images to show the project previews
-HINT for TODO 6: You can use the height attribute set to 200 to make the image smaller:
-https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-height -->
-
-<!-- TODO 7: Add the Contact Me and About Me page links -->
